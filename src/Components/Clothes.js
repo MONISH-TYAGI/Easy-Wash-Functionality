@@ -1,0 +1,23 @@
+export let arr=[
+    {
+        Name:"T-shirt",
+    Type:"Cotton",
+    Price:"100",
+    Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_dBJaSfsFH-dw17KqI3FYyl01ZPgsy1ab2g&usqp=CAU",
+    ProdId:100
+    },
+    {
+        Name:"Jeans",
+        Type:"Terricoat",
+        Price:"200",
+        Image:"https://5.imimg.com/data5/CT/EJ/MY-36931033/jeasn1-500x500.jpg",
+        ProdId:101
+    },
+    {
+        Name:"Hoodie",
+    Type:"Wool",
+    Price:"300",
+    Image:"https://cdn.shopify.com/s/files/1/0301/5131/1495/products/deadpoollogohoodie1.jpg?v=1658320237",
+    ProdId:102
+    }
+];
