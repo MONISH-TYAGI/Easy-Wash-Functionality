@@ -42,7 +42,7 @@ setAmount(doc.data().Amount)
 setRun(true);
   }
 
-      console.log("Id-> "+doc.id+" data "+doc.data());
+      // console.log("Id-> "+doc.id+" data "+doc.data());
 
 })
   }
@@ -51,8 +51,8 @@ setRun(true);
  
 },[run]);
 const [hide,sethide]=useState(false);
-console.log(" final details -> "+name);
-console.log("DetailsArr Len ",DetailsArr.length);
+// console.log(" final details -> "+name);
+// console.log("DetailsArr Len ",DetailsArr.length);
     console.log(JSON.stringify(DetailsArr));
     const generatePDF = () => {
 console.log("generating");

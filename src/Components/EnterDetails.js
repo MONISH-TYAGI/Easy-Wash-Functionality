@@ -25,9 +25,9 @@ const saveOrderInDB= async()=>{
     // console.log("date ",date);
     let time=common.getHours()+":"+common.getMinutes()+":"+common.getSeconds();
     let Id=common.getFullYear()+common.getMonth()+common.getDate()+time;
-    console.log("name ",name);
-    console.log("email",address);
-    console.log("phone ",cell)
+    // console.log("name ",name);
+    // console.log("email",address);
+    // console.log("phone ",cell)
     const subData={
         BigObj:BigObj,
         UniqueId:Id,

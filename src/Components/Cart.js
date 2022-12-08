@@ -18,12 +18,12 @@ const [itemsChange,setItemsChange]=useState(0);
     const handleChange=(Id)=>{
         setChange(Id);
     }
-    console.log("start change ",change)
+    // console.log("start change ",change)
    const handleItemsChange=(Id)=>{
-    console.log("change ",change);
-console.log("Items Change",itemsChange);
+    // console.log("change ",change);
+// console.log("Items Change",itemsChange);
  setChange(0);
- console.log("change ",change);
+//  console.log("change ",change);
  BigObj.map((obj)=>{
     if(obj.ProdId===Id)
  obj.Quantity=itemsChange;

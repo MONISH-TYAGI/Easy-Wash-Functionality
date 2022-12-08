@@ -1,12 +1,26 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import {arr} from './Clothes.js'
 import { CartContext } from '../Context/CartContextProvider';
 import { SubtitlesOffRounded } from '@mui/icons-material';
-
+import { AuthContext } from '../Context/AuthContext';
+import { Navigate, useNavigate } from 'react-router-dom';
 function Home() {
+  let navigate=useNavigate();
+  const {user}=useContext(AuthContext);
+  console.log("user ->",user);
+  useEffect(()=>{
+    console.log("user Navigate ->",user);
+  if(user==null)
+  {
+    navigate("/Login");
+  }
+},[]);
   const [number,setNumber]=useState(1);
 
+
+
+ 
 const {setObj,BigObj} = useContext(CartContext);
 
 async function fun(obj){
