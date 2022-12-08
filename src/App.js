@@ -9,7 +9,10 @@ import {CartContextProvider} from './Context/CartContextProvider';
 import Cart from './Components/Cart';
 import { Navbar } from 'react-bootstrap';
 import Orders from './Components/Orders';
+import ViewDetails from './Components/ViewDetails';
+import EnterDetails from './Components/EnterDetails';
 function App() {
+ 
   return (
    
     <>
@@ -23,7 +26,13 @@ function App() {
       <Route path="/Error" element={<Error/>}/>
       <Route path="/Cart" element={<Cart/>}/>
       <Route path="/Orders" element={<Orders/>}/>
-      <Route path="*" element={<Home/>}/>
+   <Route path="/EnterDetails" element={<EnterDetails/>}/>
+ 
+      <Route path="/Bill" element={<ViewDetails/>}/>
+       <Route path="*" element={<Home/>}/>
+   
+
+     
     </Routes>
     </CartContextProvider>
     </BrowserRouter>

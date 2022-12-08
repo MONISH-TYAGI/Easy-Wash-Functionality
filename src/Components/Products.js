@@ -15,6 +15,7 @@ async function fun(obj){
 }
   const handleItems=async(obj)=>{
 obj.Quantity=number;
+setNumber(1);
 fun(obj).then(()=>
 {
 // console.log("Len -> ",BigObj.length);

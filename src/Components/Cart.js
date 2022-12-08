@@ -1,14 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../Context/CartContextProvider'
-import BookedOrder from './BookedOrder';
+import BookedOrder from './EnterDetails';
 import Navbar from './Navbar'
 // import { Navbar } from 'react-bootstrap'
-
+import { useNavigate } from 'react-router-dom';
 function Cart() {
-    const {setObj,BigObj}=useContext(CartContext)
+    const {setObj,BigObj,BillId,setBillId,totalItems,setItems,totalAmt,setAmt}=useContext(CartContext)
     // console.log("Cart -> ",BigObj.length);
   
     // console.log("Cart ->",JSON.stringify(BigObj));
+    const navigate=useNavigate();
+   
+
     const [change,setChange]=useState(0);
     const [bill,setBill]=useState(false);
 const [itemsChange,setItemsChange]=useState(0);
@@ -33,14 +36,16 @@ let newBigObj=BigObj.filter((obj)=>{
 //  setBill(!bill);
 }
 
-    const [totalItems,setItems]=useState(0);
-    const [totalAmt,setAmt]=useState(0);
+    
+    // const [name,setName]=useState("None")
     useEffect(()=>{
         let Items=0;
         let Amt=0;
+        let currName=""
      BigObj.map((obj)=>{
         Items+=parseInt(obj.Quantity);
         Amt+=obj.Quantity*obj.Price;
+        // currName=obj.Name;
         // console.log("hello ",obj.Quantity);
         // console.log("Items ",Items);
      })
@@ -48,7 +53,11 @@ let newBigObj=BigObj.filter((obj)=>{
     //  console.log("Amt ",Amt);
      setItems(Items);
      setAmt(Amt);
+    //  setName(name);
     },[BigObj])
+    const EnterDetails=()=>{
+      navigate("/EnterDetails");
+    }
   return (
     <>
     
@@ -101,7 +110,8 @@ let newBigObj=BigObj.filter((obj)=>{
     <div className='w-50 flex justify-center'>{totalAmt}</div>
 </div>
 <div className="BillContinueBox ">
-    <BookedOrder value={[totalItems,totalAmt]}></BookedOrder>
+    {/* <BookedOrder value={[totalItems,totalAmt]}></BookedOrder> */}
+    <button className='w-full h-full bg-black text-white' onClick={EnterDetails}>Boooked</button>
 </div>
 </div>
     </>
